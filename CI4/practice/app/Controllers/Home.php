@@ -12,6 +12,6 @@ class Home extends BaseController
 
     public function welcome() : string{
 
-        return "welcome";
+        return "welcome ";
     }
 }
