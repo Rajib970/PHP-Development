@@ -10,7 +10,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/employees', ['EmployeeController@getEmployee']);
+Route::get('employees', [EmployeeController::class, 'getEmployee']);
+
+Route::post('addEmployee',[EmployeeController::class,'addEmployee']);
 
 Route::get('/test', function () {
     return response()->json([

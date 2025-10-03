@@ -8,3 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('employees', [EmployeeController::class, 'getEmployee']);
+
+Route::get('employee/{id}',[EmployeeController::class,'getEmployeeById']);
+
+// Route::post('addEmployee',[EmployeeController::class,'addEmployee']);
