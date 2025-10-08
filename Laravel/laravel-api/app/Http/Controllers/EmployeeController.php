@@ -25,4 +25,16 @@ class EmployeeController extends Controller
         $employee = Employee::create($request->all());
         return response($employee,201);
     }
+
+    public function updateEmployee(Request $req, $id){
+        $employee = Employee::find($id);
+        
+        if(is_null($employee)){
+            return resposne()->json(["message"=>"Employee Not Found!"],404);
+        }
+
+        $employee = update($req->all());
+        return response($employee,200);
+
+    }
 }
